@@ -32,11 +32,11 @@ def register_callbacks(dashapp):
 
         if time_period in d.keys():
             if pre_post == 'True':
-                ranges = [dict(bounds = ['sat', 'mon']), dict(bounds = [20, 6.5], pattern = 'hour'), dict(values = ['2022-01-17 06:30:00-00:00'])]
+                ranges = [dict(bounds = ['sat', 'mon']), dict(bounds = [20, 6.5], pattern = 'hour'), dict(values = ['2022-02-21 06:30:00-00:00'])]
             else:
-                ranges= [dict(bounds = ['sat', 'mon']), dict(bounds = [16, 9.5], pattern = 'hour'), dict(values = ['2022-01-17 09:30:00-00:00'])]
+                ranges= [dict(bounds = ['sat', 'mon']), dict(bounds = [16, 9.5], pattern = 'hour'), dict(values = ['2022-02-21 09:30:00-00:00'])]
         else:
-            ranges = [dict(bounds = ['sat', 'mon']), dict(values = ['2022-01-17'])]
+            ranges = [dict(bounds = ['sat', 'mon']), dict(values = ['2022-02-21'])]
 
         fig = px.line(df, x = df.index, y = y_var, color = 'Symbol', render_mode = 'svg')
         fig.update_xaxes(title = 'Datetime (EST)', rangebreaks = ranges, showspikes = True, spikedash = 'dot', spikemode = 'toaxis',
